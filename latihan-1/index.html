@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Samsung</title>
+    <link rel="icon" type="image/x-icon" href="/images/005930.KS-c814b965.png">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+
+        /* Style the header */
+        header {
+            background-color: #acacac;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 20%;
+            height: 2000px;
+            /* only for demonstration, should be removed */
+            background: #cecece;
+            padding: 20px;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        article {
+            float: left;
+            padding: 20px;
+            width: 80%;
+            height: 2000px;
+            background-color: #cecece;
+            /* only for demonstration, should be removed */
+        }
+
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        }
+
+        tr:nth-child(even) {
+        background-color: #dddddd;
+        }
+
+        /* Clear floats after the columns */
+        section::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: #777;
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media (max-width: 600px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="/images/pngwing.com.png" alt="samsung" style="width: 300px;">
+        </a>
+        <form action="#" style="display: flex;">
+            <input type="text" id="search" name="search" placeholder="keyword" style="width: 200px; height: 40px; border: none; border-radius: 10px 0 0 10px; border-color: black; padding: 5px 10px;">
+            <input type="submit" value="Search" style="height: 40px; border: none; border-radius: 0 10px 10px 0;">
+        </form>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Keranjang</a></li>
+                <li><a href="#">Profile</a></li>
+            </ul>
+        </nav>
+
+        <article style="background-color:#cecece;">
+            <h1>Samsung Galaxy S24 Ultra</h1>
+
+            <div style="padding: 50px 0;">
+                <iframe width="500" height="350" src="https://youtube.com/embed/3hPoEmlBQdY">
+                </iframe>
+    
+                <div>
+                    <img src="/images/galaxy-s24-ultra-highlights-color-carousel-exclusive.jpg" alt="color-carousel-exclusive" style="width: 200px; height: 150px;">
+                    <img src="/images/galaxy-s24-ultra-highlights-form-factor-start_1.jpg" alt="form-factor" style="width: 200px; height: 150px;">
+                    <img src="/images/galaxy-s24-ultra-highlights-s-pen.jpg" alt="s-pen" style="width: 200px; height: 150px;">
+                    <img src="/images/galaxy-s24-ultra-highlights-titanium.jpg" alt="titanium" style="width: 200px; height: 150px;">
+                </div>
+            </div>
+            
+            <p>Welcome to the era of mobile AI. With Galaxy S24 Ultra in your hands, you can unleash whole new levels of creativity, productivity and possibility — starting with the most important device in your life. Your smartphone.</p>
+
+            <div style="padding: 50px 0;">
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>Nama</th>
+                        <th>SKU</th>
+                        <th>Kuantitas</th>
+                        <th>Harga</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Samsung Galaxy S24 Ultra</td>
+                        <td>11pkkk2333p2k</td>
+                        <td>20</td>
+                        <td>20.000.000</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <h2>Pesan sekarang</h2>
+            <form action="post">
+                <label for="name">Nama:</label><br>
+                <input type="text" id="name" name="name" placeholder="John Doe"><br>
+                <label for="age">Umur:</label><br>
+                <input type="number" id="age" name="age" value="0"><br>
+                <label for="email">Email:</label><br>
+                <input type="text" id="email" name="email" placeholder="johndoe@mail.com"><br>
+                <label for="address">Alamat:</label><br>
+                <textarea id="address" name="address" rows="4" cols="50" placeholder="Alamat"></textarea><br/>
+                <input type="submit" value="Daftar">
+            </form>
+
+        </article>
+    </section>
+
+    <footer>
+        <p>Samsung</p>
+    </footer>
+
+</body>
+
+</html>

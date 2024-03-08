@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Collections | Perpustakaan</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <h1>
+                <a class="navbar-brand ms-3 fs-3" href="/home/"
+                    style="color: #000000; font-weight: 900;">PERPUSTAKAAN</a>
+            </h1>
+            <form class="d-flex me-5 " action="#">
+                <input type="text" id="search" name="search" class="form-control" type="search" aria-label="search"
+                    placeholder="Search..">
+            </form>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class=" ms-auto navbar-nav mb-lg-0">
+                    <li class="nav-item">
+                        <button class="btn btn-light position-relative" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#cartCollapse" aria-expanded="false" aria-controls="cartCollapse">
+                            <i class="fa-solid fa-book-open" style="color: #000000;"></i>
+                            <span class="position-absolute translate-middle badge rounded-pill bg-danger"
+                                style="top: 25%; left: 70%;">
+                                0
+                                <span class="visually-hidden">unread messages</span>
+                            </span>
+                        </button>
+                    </li>
+                    <div class="position-absolute top-100 end-0 m-2" style="z-index: 99999;">
+                        <div class="collapse collapse-horizontal" id="cartCollapse">
+                            <div class="card card-body" style="width: 500px;">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="table-group-divider">
+                                        <tr>
+                                            <td>JK Rowling - Harry Potter</td>
+                                            <td><button class="btn btn-light"><i class="fa-solid fa-trash-can"
+                                                        style="color: #ff5c5c;"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a href="/profile/" class="btn btn-light" type="button" href="/profile">Profile</a>
+                    </li>
+                    <li>
+                        <a href="/collections/" class="btn btn-light" type="button">Collections</a>
+                    </li>
+                    <li>
+                        <button class="btn btn-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+                            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center align-items-center">
+                    <h3 class="modal-title align-self-stretch">Sign in</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="d-flex flex-column justify-content-stretch align-items-center">
+                            <input type="email" class="form-control mb-3" id="emailRegistrasi"
+                                aria-describedby="emailHelp" placeholder="Email">
+                            <input type="password" class="form-control mb-3" id="passwordRegistrasi"
+                                aria-describedby="passwordHelp" placeholder="Password">
+                            <button type="submit" class="btn bg-body-tertiary align-self-end mt-5">Sign In</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-foot px-3">
+                    <p>donn't have an account? <button class="btn btn-light" type="button" data-bs-toggle="modal"
+                            data-bs-target="#registrasiModal">Sign Up</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registrasiModal" tabindex="-1" aria-labelledby="registrasiModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center align-items-center">
+                    <h3 class="modal-title">Sign Up</h3>
+                </div>
+                <div class="modal-body">
+                    <form action="#">
+                        <div class="d-flex flex-column justify-content-stretch align-items-center">
+                            <input type="text" class="form-control mb-3" id="nameRegistrasi"
+                                aria-describedby="emailHelp" placeholder="Name">
+                            <input type="email" class="form-control mb-3" id="emailRegistrasi"
+                                aria-describedby="emailHelp" placeholder="Email">
+                            <input type="password" class="form-control mb-3" id="passwordRegistrasi"
+                                aria-describedby="passwordHelp" placeholder="Password">
+                            <input type="text" class="form-control" id="adressRegistrasi" aria-describedby="addressHelp"
+                                placeholder="Address">
+                            <button type="submit" class="btn bg-body-tertiary align-self-end mt-5">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-foot px-3">
+                    <p>already have an account? <button class="btn btn-light" type="button" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Sign In</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <article class="d-flex flex-column justify-content-start align-items-center">
+        <h1 class="m-5 align-self-start">Collection</h1>
+
+        <div class="d-flex flex-row flex-wrap align-items-start justify-content-center gap-5 mx-5">
+            <div class="card" style="width: 250px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4FLwmEFutQ6kJuySY6AbEzjKMuEyQhK2aNXDR9imsBA&s"
+                    class="card-img-top" style="width: 250px; height: 400px;" alt="...">
+                <div class="card-body d-flex flex-column ">
+                    <h5 class="card-title">Tara Westover - Educated</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary ms-auto">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 250px;">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1523290463i/35356384.jpg"
+                    style="width: 250px; height: 400px;" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">How Democracies die - steven levitsky</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary ms-auto">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 250px;">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1355046521l/2547.jpg"
+                    style="width: 250px; height: 400px;" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Kahlil Gibran - The Prophet</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary ms-auto">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 250px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQqkwFFEtJIzBuKVRFOZ6XEo-pv_OFC5Y25zM0JSm9Kw&s"
+                    style="width: 250px; height: 400px;" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Trevor Noah - Born a crime</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up
+                        the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary ms-auto">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 250px;">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKZ35H3PtGIE2yjL-yLZzpFtKPbht7gxGLIZ76YV9Dsg&s"
+                    class="card-img-top" style="width: 250px; height: 400px;" alt="...">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">JK Rowling - Harry Potter</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up
+                        the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary ms-auto">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 250px;">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1375596592i/6186357.jpg"
+                    style="width: 250px; height: 400px;" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">James Dashner - The Maze Runner</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up
+                        the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary ms-auto">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 250px;">
+                <img src="https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1680914256l/62315875.jpg"
+                    style="width: 250px; height: 400px;" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Vincent Bevins - If we burn</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up
+                        the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary ms-auto">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="width: 250px;">
+                <img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1631512272i/29214420.jpg"
+                    style="width: 250px; height: 400px;" class="card-img-top" alt="...">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title">Kate Raworth = Doughnut Economics</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up
+                        the bulk of the
+                        card's content.</p>
+                    <a href="#" class="btn btn-primary ms-auto">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <nav aria-label="Page navigation example" class="align-self-end m-5">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </article>
+
+    <footer class="bg-body-tertiary d-flex justify-content-center align-items-center p-5 mt-5 w-100"
+        style="height: 50px;">
+        <p>&copy; web designed by adam</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
